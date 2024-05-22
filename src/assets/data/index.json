@@ -1,34 +1,52 @@
 {
   "newsPosts": [
     {
-      "id": 1,
+      "id": "1",
       "title": "First Post",
       "content": "This is my first blog post!",
-      "shortContent": "This is my first blog post!"
+      "shortContent": "This is my first blog post!",
+      "comments": [
+        {
+          "id": "1",
+          "content": "This is my first comment!"
+        },
+        {
+          "id": "2",
+          "content": "This is my second comment!"
+        },
+        {
+          "id": "3",
+          "content": "This is my third comment!"
+        }
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Second Post",
       "content": "This is my second blog post!",
-      "shortContent": "This is my second blog post!"
+      "shortContent": "This is my second blog post!",
+      "comments": []
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Third Post",
       "content": "This is my third blog post!",
-      "shortContent": "This is my third blog post!"
+      "shortContent": "This is my third blog post!",
+      "comments": []
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Fourth Post",
       "content": "This is my fourth blog post!",
-      "shortContent": "This is my fourth blog post!"
+      "shortContent": "This is my fourth blog post!",
+      "comments": []
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Fifth Post",
       "content": "This is my fifth blog post!",
-      "shortContent": "This is my fifth blog post!"
+      "shortContent": "This is my fifth blog post!",
+      "comments": []
     }
   ]
 }
