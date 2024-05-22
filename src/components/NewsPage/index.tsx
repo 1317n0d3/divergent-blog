@@ -29,7 +29,6 @@ const NewsPage: FC<Props> = () => {
   return (
     <main>
       {error && <h1>{error}</h1>}
-      <h1>News Page</h1>
       {newsPostsElem}
     </main>
   );

@@ -22,3 +22,19 @@ button {
   border-radius: 4px;
   cursor: pointer;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $gray;
+  border-radius: 4px;
+
+  td, th {
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  tr:hover {
+    background-color: $gray-light;
+  }
+}

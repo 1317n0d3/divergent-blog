@@ -1,0 +1,30 @@
+@import './../../constants/colors.scss';
+
+.wrapper {
+  background-color: $gray;
+  border-radius: 17px;
+  padding: 22px 18px;
+  margin: 12px 0;
+}
+
+.comments {
+  background-color: $black;
+  border-radius: 17px;
+  padding: 22px 18px;
+  margin: 12px 0;
+}
+
+.commentsInput {
+  color: $black;
+  background-color: $white;
+  padding: 8px;
+  border: 1px solid $gray-light;
+  border-radius: 4px;
+  margin: 8px 0;
+  width: 60%;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $pivot;
+  }
+}
