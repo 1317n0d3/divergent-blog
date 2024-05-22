@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { useEffect } from "react";
 import { fetchNews } from "../../store/reducers/ActionCreators";
 import Comment from "../Comment";
+import StatsTable from "../StatsTable";
 
 const NewsPost = () => {
   const dispatch = useAppDispatch();
@@ -30,40 +31,32 @@ const NewsPost = () => {
   ));
 
   return (
-    <div className={styles.wrapper}>
-      <h1>{newsPostData.title}</h1>
-      <p>{newsPostData.content}</p>
+    <div>
+      <div className={styles.wrapper}>
+        <h1 className={styles.title}>{newsPostData.title}</h1>
+        <p className={styles.content}>{newsPostData.content}</p>
 
-      <div className={styles.comments}>
-        <h2>Комментарии</h2>
-        <input
-          type="text"
-          placeholder="Ваш комментарий"
-          className={styles.commentsInput}
-        />
-        <button type="submit">Отправить</button>
+        <div className={styles.comments}>
+          <h2>Комментарии</h2>
 
-        {comments}
+          <div className={styles.commentsForm}>
+            <input
+              type="text"
+              placeholder="Ваш комментарий"
+              className={styles.commentsInput}
+            />
+            <button type="submit">Отправить</button>
+          </div>
+
+          {comments}
+        </div>
       </div>
 
-      <h2>Статистика</h2>
-
-      <table>
-        <tbody>
-          <tr>
-            <th>Количество статей</th>
-            <td>{count}</td>
-          </tr>
-          <tr>
-            <th>Общее количество символов</th>
-            <td>{allSymbolsCount}</td>
-          </tr>
-          <tr>
-            <th>Количество комментариев</th>
-            <td>{newsPostData.comments.length}</td>
-          </tr>
-        </tbody>
-      </table>
+      <StatsTable
+        postsCount={count}
+        allSymbolsCount={allSymbolsCount}
+        commentsCount={newsPostData.comments.length}
+      />
     </div>
   );
 };

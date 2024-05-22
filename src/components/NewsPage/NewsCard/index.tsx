@@ -12,10 +12,16 @@ type Props = {
 const NewsCard: FC<Props> = (props) => {
   return (
     <div className={styles.wrapper}>
-      <p>{props.title}</p>
-      <p>{props.shortContent}</p>
-      <p>Количество комментариев: {props.commentsCount}</p>
-      <Link to={`/divergent-blog/${props.id}`}>Подробнее</Link>
+      <p className={styles.title}>{props.title}</p>
+      <p className={styles.content}>{props.shortContent}</p>
+      <div className={styles.bottom}>
+        <Link to={`/divergent-blog/${props.id}`} className={styles.link}>
+          Подробнее
+        </Link>
+        <p className={styles.commentsCount}>
+          Количество комментариев: {props.commentsCount}
+        </p>
+      </div>
     </div>
   );
 };

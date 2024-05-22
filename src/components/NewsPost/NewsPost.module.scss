@@ -5,26 +5,42 @@
   border-radius: 17px;
   padding: 22px 18px;
   margin: 12px 0;
+  box-shadow: $shadow;
+}
+
+.title {
+  font-size: 26px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.content {
+  font-size: 18px;
+  margin-bottom: 16px;
 }
 
 .comments {
-  background-color: $black;
+  background-color: $gray-dark;
   border-radius: 17px;
   padding: 22px 18px;
   margin: 12px 0;
 }
 
-.commentsInput {
-  color: $black;
-  background-color: $white;
-  padding: 8px;
-  border: 1px solid $gray-light;
-  border-radius: 4px;
-  margin: 8px 0;
-  width: 60%;
-  outline: none;
+.commentsForm {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
 
-  &:focus {
-    border: 1px solid $pivot;
-  }
+.commentsInput {
+  display: block;
+  padding: 12px;
+  height: 20px;
+  width: 90%;
+  font-size: 16px;
+  background-color: $gray;
+  outline: none;
+  border: none;
+  border-radius: 14px;
 }
