@@ -32,7 +32,7 @@ const NewsPage: FC<Props> = () => {
       <Header />
       <main className={styles.wrapper}>
         {error && <h1>{error}</h1>}
-        {newsPostsElem}
+        {newsPostsElem.reverse()}
       </main>
     </>
   );

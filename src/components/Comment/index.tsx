@@ -8,7 +8,7 @@ type Props = {
 const Comment: FC<Props> = (props) => {
   return (
     <div className={styles.wrapper}>
-      <p>{props.comment.content}</p>
+      <p className={styles.content}>{props.comment.content}</p>
     </div>
   );
 };

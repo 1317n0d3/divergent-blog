@@ -34,6 +34,7 @@ export const newsSlice = createSlice({
     addNewsPost: (state, action: PayloadAction<TData>) => {
       state.count++;
       state.newsPosts.push({ ...action.payload });
+      state.allSymbolsCount += action.payload.content.length;
     },
     addNewComment: (
       state,
