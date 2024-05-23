@@ -12,7 +12,9 @@ type Props = {
 const NewsCard: FC<Props> = (props) => {
   return (
     <div className={styles.wrapper}>
-      <p className={styles.title}>{props.title}</p>
+      <Link to={`/divergent-blog/${props.id}`} className={styles.title}>
+        {props.title}
+      </Link>
       <p className={styles.content}>{props.shortContent}</p>
       <div className={styles.bottom}>
         <Link to={`/divergent-blog/${props.id}`} className={styles.link}>

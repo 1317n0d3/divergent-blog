@@ -10,7 +10,6 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import NewsPage from "./components/NewsPage";
-import Footer from "./components/Footer";
 import NewsPost from "./components/NewsPost";
 import CreatePostPage from "./components/CreatePostPage";
 
@@ -42,7 +41,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={router} />
-      {/* <Footer /> */}
     </Provider>
   </React.StrictMode>
 );
