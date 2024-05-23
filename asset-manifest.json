@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/divergent-blog/static/css/main.e20acc2f.css",
+    "main.js": "/divergent-blog/static/js/main.4a84850e.js",
+    "static/js/453.b467b7c3.chunk.js": "/divergent-blog/static/js/453.b467b7c3.chunk.js",
+    "index.html": "/divergent-blog/index.html",
+    "main.e20acc2f.css.map": "/divergent-blog/static/css/main.e20acc2f.css.map",
+    "main.4a84850e.js.map": "/divergent-blog/static/js/main.4a84850e.js.map",
+    "453.b467b7c3.chunk.js.map": "/divergent-blog/static/js/453.b467b7c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e20acc2f.css",
+    "static/js/main.4a84850e.js"
+  ]
+}
