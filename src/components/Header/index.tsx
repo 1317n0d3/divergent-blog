@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.scss";
+import SearchBox from "../SearchBox";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
           Divergent blog
         </Link>
         <div className={styles.search}>
-          <input type="text" placeholder="Поиск" className={styles.input} />
+          <SearchBox />
           <Link to="/divergent-blog/create" className={styles.buttonLink}>
             Создать пост
           </Link>

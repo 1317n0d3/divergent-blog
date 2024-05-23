@@ -1,0 +1,26 @@
+@import './../../constants/colors.scss';
+
+.input {
+  background-color: $gray;
+  position: relative;
+}
+
+.results {
+  position: absolute;
+  top: 100%;
+  max-height: 200px;
+  overflow-y: scroll;
+  z-index: 1;
+  background-color: $gray;
+  width: 350px;
+  padding: 12px 18px;
+  // margin: 12px 0;
+  box-shadow: $shadow;
+}
+
+.resultItem {
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid $gray-dark;
+  cursor: pointer;
+}
