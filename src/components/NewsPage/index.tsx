@@ -1,8 +1,9 @@
 import { FC, useEffect } from "react";
-import styles from "NewsPage.module.scss";
+import styles from "./NewsPage.module.scss";
 import NewsCard from "./NewsCard";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
 import { fetchNews } from "../../store/reducers/ActionCreators";
+import Header from "../Header";
 
 type Props = {};
 
@@ -27,10 +28,13 @@ const NewsPage: FC<Props> = () => {
   });
 
   return (
-    <main>
-      {error && <h1>{error}</h1>}
-      {newsPostsElem}
-    </main>
+    <>
+      <Header />
+      <main className={styles.wrapper}>
+        {error && <h1>{error}</h1>}
+        {newsPostsElem}
+      </main>
+    </>
   );
 };
 

@@ -1,0 +1,53 @@
+@import './../../constants/colors.scss';
+
+.header {
+  background-color: $black;
+  position: fixed;
+  width: 100%;
+}
+
+.wrapper {
+  padding : 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input {
+  background-color: $gray;
+}
+
+.link {
+  text-decoration: none;
+  color: $white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $pivot;
+  }
+}
+
+.buttonLink {
+  text-decoration: none;
+  background-color: $pivot;
+  color: $white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background-color: darken($pivot, 10%);
+  }
+}

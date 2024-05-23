@@ -6,6 +6,7 @@ import { fetchNews } from "../../store/reducers/ActionCreators";
 import Comment from "../Comment";
 import StatsTable from "../StatsTable";
 import { newsSlice } from "../../store/reducers/NewsSlice";
+import Header from "../Header";
 
 const NewsPost = () => {
   const dispatch = useAppDispatch();
@@ -47,39 +48,42 @@ const NewsPost = () => {
   };
 
   return (
-    <div>
+    <>
+      <Header />
       <div className={styles.wrapper}>
-        <h1 className={styles.title}>{newsPostData.title}</h1>
-        <p className={styles.content}>{newsPostData.content}</p>
+        <div className={styles.container}>
+          <h1 className={styles.title}>{newsPostData.title}</h1>
+          <p className={styles.content}>{newsPostData.content}</p>
 
-        <div className={styles.comments}>
-          <h2>Комментарии</h2>
+          <div className={styles.comments}>
+            <h2>Комментарии</h2>
 
-          <div className={styles.commentsForm}>
-            <input
-              ref={input}
-              type="text"
-              placeholder="Ваш комментарий"
-              className={styles.commentsInput}
-            />
-            <button
-              type="submit"
-              onClick={() => addNewComment(newsPostData.id)}
-            >
-              Отправить
-            </button>
+            <div className={styles.commentsForm}>
+              <input
+                ref={input}
+                type="text"
+                placeholder="Ваш комментарий"
+                className={styles.commentsInput}
+              />
+              <button
+                type="submit"
+                onClick={() => addNewComment(newsPostData.id)}
+              >
+                Отправить
+              </button>
+            </div>
+
+            {comments}
           </div>
-
-          {comments}
         </div>
-      </div>
 
-      <StatsTable
-        postsCount={count}
-        allSymbolsCount={allSymbolsCount}
-        commentsCount={newsPostData.comments.length}
-      />
-    </div>
+        <StatsTable
+          postsCount={count}
+          allSymbolsCount={allSymbolsCount}
+          commentsCount={newsPostData.comments.length}
+        />
+      </div>
+    </>
   );
 };
 

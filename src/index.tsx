@@ -10,9 +10,9 @@ import {
   createBrowserRouter,
 } from "react-router-dom";
 import NewsPage from "./components/NewsPage";
-import Header from "./components/Header";
 import Footer from "./components/Footer";
 import NewsPost from "./components/NewsPost";
+import CreatePostPage from "./components/CreatePostPage";
 
 const store = setupStore();
 
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
     element: <NewsPage />,
   },
   {
+    path: "/divergent-blog/create",
+    element: <CreatePostPage />,
+  },
+  {
     path: "/divergent-blog/:id",
     element: <NewsPost />,
   },
@@ -37,7 +41,6 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      {/* <Header /> */}
       <RouterProvider router={router} />
       {/* <Footer /> */}
     </Provider>

@@ -11,8 +11,6 @@
 
 body {
   background-color: $gray-dark;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 button {
@@ -29,4 +27,19 @@ button {
   &:hover {
     background-color: darken($pivot, 10%);
   }
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+  background-color: $gray-dark;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  width: 400px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
 }

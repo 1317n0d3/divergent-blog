@@ -10,7 +10,7 @@ table {
   box-shadow: $shadow;
 
   thead {
-    border-bottom: 1px solid $gray-light;
+    border-bottom: 2px dashed $gray-light;
 
     th {
       text-align: center;
