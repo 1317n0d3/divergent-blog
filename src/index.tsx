@@ -37,9 +37,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <Header />
+      {/* <Header /> */}
       <RouterProvider router={router} />
-      <Footer />
+      {/* <Footer /> */}
     </Provider>
   </React.StrictMode>
 );

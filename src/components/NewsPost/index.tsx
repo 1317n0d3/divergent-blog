@@ -1,20 +1,22 @@
 import { useParams } from "react-router-dom";
 import styles from "./NewsPost.module.scss";
 import { useAppDispatch, useAppSelector } from "../../hooks/redux";
-import { useEffect } from "react";
+import { RefObject, useEffect, useRef } from "react";
 import { fetchNews } from "../../store/reducers/ActionCreators";
 import Comment from "../Comment";
 import StatsTable from "../StatsTable";
+import { newsSlice } from "../../store/reducers/NewsSlice";
 
 const NewsPost = () => {
   const dispatch = useAppDispatch();
   const { newsPosts, allSymbolsCount, count } = useAppSelector(
     (state) => state.newsReducer
   );
+  const input: RefObject<HTMLInputElement> = useRef(null);
 
   useEffect(() => {
     dispatch(fetchNews());
-  });
+  }, [dispatch]);
 
   const id = useParams().id;
   const newsPostData = newsPosts.find((post) => post.id === id);
@@ -30,6 +32,20 @@ const NewsPost = () => {
     />
   ));
 
+  const addNewComment = (id: string) => {
+    if (!input.current) return;
+    if (!input.current.value) return;
+
+    const content: string = input.current.value;
+    const comment: TComment = {
+      id: Date.now().toString(),
+      content,
+    };
+    dispatch(newsSlice.actions.addNewComment({ id, comment }));
+
+    input.current.value = "";
+  };
+
   return (
     <div>
       <div className={styles.wrapper}>
@@ -41,11 +57,17 @@ const NewsPost = () => {
 
           <div className={styles.commentsForm}>
             <input
+              ref={input}
               type="text"
               placeholder="Ваш комментарий"
               className={styles.commentsInput}
             />
-            <button type="submit">Отправить</button>
+            <button
+              type="submit"
+              onClick={() => addNewComment(newsPostData.id)}
+            >
+              Отправить
+            </button>
           </div>
 
           {comments}
